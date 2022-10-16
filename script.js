@@ -80,6 +80,34 @@ function writePassword() {
    }  
    }
 
+   let passwordCharsNumbers = prompt (
+    'Would you like to include numbers in your password?'
+   );
+   
+   
+   if (passwordCharsNumbers === 'confirm') {
+    charOptions = charOptions.concat(charsNumbers);
+    window.alert ('you have include numbers into your password.')
+    console.log(charsOptions);
+   if (passwordCharsNumbers === 'cancel') {
+    window.alert ('NO numbers have be added to your password.')
+   }  
+   }
+
+   let passwordCharsSpecial = prompt (
+    'Would you like to include special characters in your password?'
+   );
+   
+   
+   if (passwordCharsSpecial === 'confirm') {
+    charOptions = charOptions.concat(charsSpecial);
+    window.alert ('you have include special characters into your password.')
+    console.log(charsOptions);
+   if (passwordCharsSpecial === 'cancel') {
+    window.alert ('NO special characters have be added to your password.')
+   }  
+   }
+
 
   }
 
