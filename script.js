@@ -26,7 +26,8 @@ const charsNumbers = [
 console.log( charsNumbers);
 
 const charsSpecial = [
- // '!' ')' '(' '*' '+' '-' '/' '#' '$' '%' '&' ':' ';' '<' '=' '>' '?' '@' '_'
+  '!', '*', '+', '-', '/', '#', '$', '%', '&', ':', ';', ')', '(', '<', '=', '>', '?', '@', '_',
+
 ];
  console.log( charsSpecial);
 
