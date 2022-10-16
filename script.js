@@ -40,12 +40,17 @@ function writePassword() {
 }
 
   function generatePassword () {
-   let test =  window.prompt ( "type the number you like "
+   let passwordLength = prompt (
+    "Enter the number of characters you would like your password to be:"
+   );
+   if (passwordLength < 8 || passwordLength > 128) {
+    window.alert ('please try agian the characters must be between 8 and 128 characters')
+   }
+   }
       
-    )
-    console. log (test)
     
-  }
+    
+  
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
