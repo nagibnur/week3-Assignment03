@@ -108,10 +108,19 @@ function writePassword() {
   return password;
   console.log(password);
 
-  
   }
 
-   passwordText.value = password;
+  passwordText.value = password;
+
+  /*
+  const newPassword = window.confirm ('Would you like to generate a new password')
+  if (newPassword) {
+    generatePassword();
+  }else {
+    return;
+  }
+
+   */
 
 }
 
