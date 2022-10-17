@@ -35,8 +35,8 @@ const charsSpecial = [
  
  
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  const password = generatePassword();
+  const passwordText = document.querySelector("#password");
 
   function generatePassword () {
    let charOptions = [];
@@ -100,13 +100,20 @@ function writePassword() {
     window.alert ('NO special characters have be added to your password.')
    }  
    
+   for (let i = 0; i < passwordLength; i++) {
+    const passwordConfig = Math.floor(Math.random() * charOptions.length); 
+    const randomPassword = charOptions[passwordConfig];
+    password = password + randomPassword;
+  }
+  return password;
+  console.log(password);
 
-
-
+  
+  }
 
    passwordText.value = password;
 
-  }
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
