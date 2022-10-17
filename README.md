@@ -12,3 +12,5 @@ And of course the alert which correspond with each prompts.
 Password Generator :
 
 ## Link
+
+https://nagibnur.github.io/week3-Assignment03/
