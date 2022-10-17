@@ -9,4 +9,6 @@ And of course the alert which correspond with each prompts.
 
 ## Mock up 
 
+Password Generator :
+
 ## Link
