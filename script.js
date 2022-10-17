@@ -31,18 +31,16 @@ const charsSpecial = [
 ];
  console.log( charsSpecial);
 
- const charOptions = [];
- console.log(charOptions);
+ 
+ 
  
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-}
-
   function generatePassword () {
+   let charOptions = [];
+   let password = '';
    let passwordLength = prompt (
     "Enter the number of characters you would like your password to be:"
    );
@@ -51,65 +49,64 @@ function writePassword() {
     return;
    }
    
-  
-   let passwordCharsLowerCase = prompt (
+   
+   let passwordCharsLowerCase = confirm (
     'Would you like to include lower case letters in your password?'
    );
    
-   
-   if (passwordCharsLowerCase === 'confirm') {
+   if (passwordCharsLowerCase === true) {
     charOptions = charOptions.concat(charsLowerCase);
     window.alert ('you have include lowercase characters into your password.')
-    console.log(charsOptions);
-   if (passwordCharsLowerCase === 'cancel') {
-    window.alert ('NO lowercase characters have be added to your password.')
-   }  
+   } else {
+      window.alert ('NO lowercase characters have be added to your password.')
    }
 
-   let passwordCharsUpperCase = prompt (
+ 
+   let passwordCharsUpperCase = confirm (
     'Would you like to include upper case letters in your password?'
    );
    
    
-   if (passwordCharsUpperCase === 'confirm') {
+   if (passwordCharsUpperCase === true) {
     charOptions = charOptions.concat(charsUpperCase);
     window.alert ('you have include uppercase characters into your password.')
-    console.log(charsOptions);
-   if (passwordCharsUpperCase === 'cancel') {
+   } else {
     window.alert ('NO uppercase characters have be added to your password.')
    }  
-   }
+   
 
-   let passwordCharsNumbers = prompt (
+   let passwordCharsNumbers = confirm (
     'Would you like to include numbers in your password?'
    );
    
    
-   if (passwordCharsNumbers === 'confirm') {
+   if (passwordCharsNumbers === true) {
     charOptions = charOptions.concat(charsNumbers);
     window.alert ('you have include numbers into your password.')
-    console.log(charsOptions);
-   if (passwordCharsNumbers === 'cancel') {
+   } else {
     window.alert ('NO numbers have be added to your password.')
    }  
-   }
+   
 
-   let passwordCharsSpecial = prompt (
+   let passwordCharsSpecial = confirm (
     'Would you like to include special characters in your password?'
    );
    
    
-   if (passwordCharsSpecial === 'confirm') {
+   if (passwordCharsSpecial === true) {
     charOptions = charOptions.concat(charsSpecial);
     window.alert ('you have include special characters into your password.')
-    console.log(charsOptions);
-   if (passwordCharsSpecial === 'cancel') {
+   } else {
     window.alert ('NO special characters have be added to your password.')
    }  
-   }
+   
 
+
+
+
+   passwordText.value = password;
 
   }
-
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
