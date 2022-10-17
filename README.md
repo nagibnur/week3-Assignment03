@@ -9,7 +9,9 @@ And of course the alert which correspond with each prompts.
 
 ## Mock up 
 
-Password Generator :
+Password Generator : 
+
+![alt text](./assets/images/Password_Generator.mov)
 
 ## Link
 
